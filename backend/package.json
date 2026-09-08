@@ -1,25 +1,31 @@
 {
-	"name": "budgetto",
-	"version": "1.0.0",
-	"description": "",
-	"license": "ISC",
-	"author": "",
-	"type": "module",
-	"scripts": {
-		"dev": "nodemon --exec ts-node src/server.ts",
-		"build": "tsc",
-		"start": "node dist/server.js"
-	},
-	"dependencies": {
-		"dotenv": "^17.4.2",
-		"express": "^5.2.1",
-		"pg-promise": "^12.7.1"
-	},
-	"devDependencies": {
-		"@types/express": "^5.0.6",
-		"@types/node": "^26.5.0",
-		"nodemon": "^3.1.14",
-		"ts-node": "^10.9.2",
-		"typescript": "^6.0.3"
-	}
+  "name": "budgetto",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "postinstall": "prisma skills sync || exit 0",
+    "contract:emit": "prisma contract emit"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.10.0",
+    "@prisma/orm-postgres": "^8.0.0-rc.8",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg-promise": "^12.7.1"
+  },
+  "devDependencies": {
+    "@prisma/cli-engine": "^0.2.3",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.5.0",
+    "nodemon": "^3.1.14",
+    "prisma": "^8.0.0-rc.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
 }
