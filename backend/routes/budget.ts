@@ -7,8 +7,4 @@ router.use((req: Request, res: Response, next: NextFunction) => {
     next()
 })
 
-router.get("/hello", (req: Request, res: Response) => {
-    res.send("Hello")
-})
-
 export default router
