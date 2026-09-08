@@ -5,9 +5,10 @@
 	"license": "ISC",
 	"author": "",
 	"type": "module",
-	"main": "index.ts",
 	"scripts": {
-		"start": "nodemon index.ts"
+		"dev": "nodemon --exec ts-node src/server.ts",
+		"build": "tsc",
+		"start": "node dist/server.js"
 	},
 	"dependencies": {
 		"dotenv": "^17.4.2",

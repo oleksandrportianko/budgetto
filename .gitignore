@@ -3,3 +3,5 @@
 */.env
 /environment/*
 !/environment/.gitkeep
+structure.txt
+*/dist
